@@ -74,6 +74,30 @@ namespace MoodTester
            
 
         }
+        [TestMethod]
+        public void given_empty_mood_should_return_empty_exception()
+        {
+            try
+            {
+                //analyse
+                string message =" ";
+                
+                MoodAnalyser moodObj = new MoodAnalyser(message);
+
+                //act
+                string actual = moodObj.analyse_mood();
+            }
+            catch (Exception ex)
+            {
+                //assert
+                Assert.AreEqual("Invalid Mood", ex.Message);
+
+            }
+
+
+
+
+        }
 
     }
 }
