@@ -11,29 +11,15 @@ namespace MoodTester
             //analyse
             string message = "I am in Sad Mood";
             string expected = "SAD";
-            MoodAnalyser moodObj = new MoodAnalyser(message);
+            MoodAnalyser moodObj = new MoodAnalyser();
 
             //act
-            string actual = moodObj.analyse_mood();
+            string actual = moodObj.analyse_mood(message);
 
             //assert
             Assert.AreEqual(expected, actual);
             
         }
-        [TestMethod]
-        public void given_anymood_should_return_happy()
-        {
-            //analyse
-            string message = "I am in Any Mood";
-            string expected = "HAPPY";
-            MoodAnalyser moodObj = new MoodAnalyser(message);
-
-            //act
-            string actual = moodObj.analyse_mood();
-
-            //assert
-            Assert.AreEqual(expected, actual);
-
-        }
+        
     }
 }

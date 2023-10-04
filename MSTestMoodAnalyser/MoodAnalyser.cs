@@ -8,14 +8,10 @@ namespace MSTestMoodAnalyserAssignment
 {
     public class MoodAnalyser
     {
-        string message;
-        public MoodAnalyser(string message) 
+        
+        public string analyse_mood(string message)
         {
-            this.message = message;
-        }
-        public string analyse_mood()
-        {
-            if(this.message.Contains("Sad"))
+            if(message.Contains("Sad"))
             {
                 return "SAD";
             }
