@@ -20,6 +20,21 @@ namespace MoodTester
             Assert.AreEqual(expected, actual);
             
         }
-        
+        [TestMethod]
+        public void given_any_mood_should_return_happy()
+        {
+            //analyse
+            string message = "I am in Any Mood";
+            string expected = "HAPPY";
+            MoodAnalyser moodObj = new MoodAnalyser();
+
+            //act
+            string actual = moodObj.analyse_mood(message);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
     }
 }
